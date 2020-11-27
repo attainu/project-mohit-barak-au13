@@ -30,9 +30,10 @@ class Update_Menu(Sukhdev_dhaba,Mannat_Haveli,Koyal):
                 self.price = input("Add the price: ")
                 print()
                 res_A.menu_T[self.item]=self.price
-                print("Updated menu :")
+                print("Your Updated menu are :")
                 for key in res_A.menu_T:
                     print(key,':',res_A.menu_T[key])
+                print("Now load the app again we are exiting you from the app")
 
             elif self.op == '2':
                 for key in res_A.menu_T:
@@ -43,6 +44,7 @@ class Update_Menu(Sukhdev_dhaba,Mannat_Haveli,Koyal):
                 print("Your updated menu are:")
                 for key in res_A.menu_T:
                     print(key,':',res_A.menu_T[key])
+                print("Now load the app again we are exiting you from the app")
             
             elif self.op == '3':
                 return
@@ -67,6 +69,7 @@ class Update_Menu(Sukhdev_dhaba,Mannat_Haveli,Koyal):
                 print("Your updated menu are:")
                 for key in res_B.menu_S:
                     print(key,':',res_B.menu_S[key])
+                print("Now load the app again we are exiting you from the app")
                 
                 
             elif self.op == '2':
@@ -76,6 +79,7 @@ class Update_Menu(Sukhdev_dhaba,Mannat_Haveli,Koyal):
                 print("Your updated menu are: ")
                 for key in res_B.menu_S:
                     print(key,':',res_B.menu_S[key])
+                print("Now load the app again we are exiting you from the app")
                 
             
             elif self.op == '3':
@@ -102,6 +106,7 @@ class Update_Menu(Sukhdev_dhaba,Mannat_Haveli,Koyal):
                 print("Your updated menu are: ")
                 for key in res_C.menu_D:
                     print(key,':',res_C.menu_D[key])
+                print("Now load the app again we are exiting you from the app")
                 
 
             elif self.op == '2':
@@ -111,6 +116,7 @@ class Update_Menu(Sukhdev_dhaba,Mannat_Haveli,Koyal):
                 print("Your updated menu are: ")
                 for key in res_C.menu_D:
                     print(key,':',res_C.menu_D[key])
+                print("Now load the app again we are exiting you from the app")
                 
             
             elif self.op == '3':

@@ -18,7 +18,7 @@ res_B.food_item()
 res_C.food_item()
 
 print()
-print( "* " * 7 + "      WELCOME TO CRAVINGZZ!!!     "+ "* " * 7)
+print( "* " * 7 + "      WELCOME TO Swiggy!!!     "+ "* " * 7)
 print("  " + "* " * 10 + "   HELLO BUDDY!!   " + "* " * 9) 
 print()
 print(" >> Choose your option :-")
@@ -53,7 +53,7 @@ if option == '1':
                 upd.add_item(res_A, res_B, res_C)
             else:
                 print("invalid owner pin")
-            continue
+            break
 
         
 else :
