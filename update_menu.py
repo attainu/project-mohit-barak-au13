@@ -56,13 +56,13 @@ class Update_Menu(Sukhdev_dhaba,Koyal,Mannat_Haveli):
             print()
             if self.op == '1':
                 print("Dishes in your menu :")
-                for key in res_B.menu_S:
-                    print(key,':',res_B.menu_S[key])
+                for key in restau_K.menu_koyal:
+                    print(key,':',restau_K.menu_koyal[key])
                 
                 self.item = input("Enter the name of dish: ")
                 self.price = input("Add the price: ")
                 print()
-                res_B.menu_S[self.item]=self.price
+                restau_K.menu_koyal[self.item]=self.price
                 print("Your new menu is: ")
                 for key in restau_K.menu_koyal:
                     print(key,':',restau_K.menu_koyal[key])
@@ -77,7 +77,7 @@ class Update_Menu(Sukhdev_dhaba,Koyal,Mannat_Haveli):
                 del restau_K.menu_koyal[self.item]
                 print("Your new menu is: ")
                 for key in restau_K.menu_koyal:
-                    print(key,':',res_B.menu_S[key])
+                    print(key,':',restau_K.menu_koyal[key])
                 print("Now load the app again we are exiting you from the app")
                 
             
