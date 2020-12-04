@@ -5,29 +5,26 @@ from Payment import *
 
 class Multiple_Order_Selection(Sukhdev_dhaba,Koyal,Mannat_Haveli):
 
-    def multiple_order(self,res_A,res_B,res_C):
+    def multiple_order(self,restau_S,restau_K,restau_M):
 
-        self.mul_order_list = {}
+        self.multiple_order_list = {}
         self.max_order = 3 
         
-        print("!!! These Restaurants are open now !!!")
-        print()
+        print("!!! Restaurants available now are ----\n")
         
-        print("1.SUkhdev Dhaba \n2.Koyal \n3.Mannat Haveli")
-        print()
+        print("1.SUkhdev Dhaba \n2.Koyal \n3.Mannat Haveli\n")
         
-        self.res_name = input("Choose the restaurant by number: ")
-        print()
+        self.res_name = input("Choose the restaurant by number: \n")
         n = 1
         if self.res_name == '1':#SUkhdev Dhaba
             
-            for key in res_A.menu_T:
-                print(n,". ",key,':',res_A.menu_T[key])
+            for key in restau_S.menu_sukhdev:
+                print(n,". ",key,':',restau_S.menu_sukhdev[key])
                 n = n + 1
             for i in range (self.max_order):
-                self.choice = input("Enter the name of the item  you want to order: ")
+                self.choice = input("Enter the name of the item  you want to order: ").lower()
                 print()
-                self.mul_order_list[self.choice]=res_A.menu_T[self.choice]
+                self.multiple_order_list[self.choice]=restau_S.menu_sukhdev[self.choice]
                                     
                 if i == 1:
                     self.choice = input("Do you wish to add more food from Sukhdev Dhabha . Press Y  for YES & N for NO: ")
@@ -35,9 +32,9 @@ class Multiple_Order_Selection(Sukhdev_dhaba,Koyal,Mannat_Haveli):
                     if self.choice == 'Y' or self.choice == 'y':
                         print("Your Cart is almost full!! This is the last item you can order")
                         print()
-                        self.choice = input("Enter your last item name  which you wish to add: ")
+                        self.choice = input("Enter your last item name  which you wish to add: ").lower()
                         print()
-                        self.mul_order_list[self.choice]=res_A.menu_T[self.choice]
+                        self.multiple_order_list[self.choice]=restau_S.menu_sukhdev[self.choice]
                         break
                     elif self.choice == 'N' or self.choice == 'n':
                         break
@@ -52,7 +49,7 @@ class Multiple_Order_Selection(Sukhdev_dhaba,Koyal,Mannat_Haveli):
             print()
 
             if self.py_choice == 'Y' or self.py_choice == 'y':
-                Payment.order_payment(self.mul_order_list)
+                Payment.order_payment(self.multiple_order_list)
                
 
             elif self.py_choice == 'N' or self.py_choice == 'n':
@@ -61,22 +58,22 @@ class Multiple_Order_Selection(Sukhdev_dhaba,Koyal,Mannat_Haveli):
 
         elif self.res_name == '2':#Koyal
 
-            for key in res_B.menu_S:
-                print(n,key,':',res_B.menu_S[key])
+            for key in restau_K.menu_koyal:
+                print(n,key,':',restau_K.menu_koyal[key])
                 n = n + 1
             for i in range (self.max_order):
-                self.choice = input("Enter the item name you wish to order: ")
+                self.choice = input("Enter the item name you wish to order: ").lower()
                 print()
-                self.mul_order_list[self.choice]=res_B.menu_S[self.choice]
+                self.multiple_order_list[self.choice]=restau_K.menu_koyal[self.choice]
                 if i == 1:
                     self.choice = input("Do you wish to add more food From Koyal Restaurant. Press Y for YES & N for NO: ")
                     print()
                     if self.choice == 'Y' or self.choice == 'y':
                         print("Your Cart is almost full!! This is the last item you can order")
                         print()
-                        self.choice = input("Enter your last item name  which you wish to add: ")
+                        self.choice = input("Enter your last item name  which you wish to add: ").lower()
                         print()
-                        self.mul_order_list[self.choice]=res_B.menu_S[self.choice]
+                        self.multiple_order_list[self.choice]=restau_K.menu_koyal[self.choice]
                         break
                     elif self.choice == 'N' or self.choice == 'n':
                         break
@@ -91,7 +88,7 @@ class Multiple_Order_Selection(Sukhdev_dhaba,Koyal,Mannat_Haveli):
             print()
 
             if self.py_choice == 'Y' or self.py_choice == 'y':
-                Payment.order_payment(self.mul_order_list)
+                Payment.order_payment(self.multiple_order_list)
                
 
             elif self.py_choice == 'N' or self.py_choice == 'n':
@@ -99,23 +96,23 @@ class Multiple_Order_Selection(Sukhdev_dhaba,Koyal,Mannat_Haveli):
 
         elif self.res_name == '3':#Mannat Haveli
 
-            for key in res_C.menu_D:
-                print(n,key,':',res_C.menu_D[key])
+            for key in restau_M.menu_mannat:
+                print(n,key,':',restau_M.menu_mannat[key])
                 n = n + 1
             max_order = 3 
             for i in range (max_order):
-                self.choice = input("Enter the item name you wish to order: ")
+                self.choice = input("Enter the item name you wish to order: ").lower()
                 print()
-                self.mul_order_list[self.choice]=res_C.menu_D[self.choice]
+                self.multiple_order_list[self.choice]=restau_M.menu_mannat[self.choice]
                 if i == 1:
                     self.choice = input("Do you wish to add more food from Mannat. Press Y for YES & N for NO: ")
                     print()
                     if self.choice == 'Y' or self.choice == 'y':
                         print("Your Cart is almost full!! This is the last item you can order")
                         print()
-                        self.choice = input("Enter your last item name  which you wish to add: ")
+                        self.choice = input("Enter your last item name  which you wish to add: ").lower()
                         print()
-                        self.mul_order_list[self.choice]=res_C.menu_D[self.choice]
+                        self.multiple_order_list[self.choice]=restau_M.menu_mannat[self.choice]
                         break
                     elif self.choice == 'N' or self.choice == 'n':
                         break
@@ -129,13 +126,7 @@ class Multiple_Order_Selection(Sukhdev_dhaba,Koyal,Mannat_Haveli):
             print() 
 
             if self.py_choice == 'Y' or self.py_choice == 'y':
-                Payment.order_payment(self.mul_order_list)
+                Payment.order_payment(self.multiple_order_list)
 
             elif self.py_choice == 'N' or self.py_choice == 'n':
                 return
-        
-
-
-
-
-

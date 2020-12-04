@@ -7,56 +7,46 @@ from update_menu import *
 
 
 
-sngl = Single_Order_Selection()
-mul = Multiple_Order_Selection()
-upd = Update_Menu()
-res_A = Sukhdev_dhaba()
-res_B = Koyal()
-res_C = Mannat_Haveli()
-res_A.food_item()
-res_B.food_item()
-res_C.food_item()
+singl = Single_Order_Selection()
+multple = Multiple_Order_Selection()
+updation = Update_Menu()
+restau_S = Sukhdev_dhaba()
+restau_K = Koyal()
+restau_M = Mannat_Haveli()
+restau_S.food_item()
+restau_K.food_item()
+restau_M.food_item()
 
+print("\n", "~ " * 7 + "      WELCOME TO Swiggy!!!     "+ "~ " * 7,"\n")
+print("  Choose your options here :- \n")
+print(" 1 For Food ordering ")
+print(" 2 To QUIT \n")
+choice = input(">> Enter your option : ")
 print()
-print( "* " * 7 + "      WELCOME TO Swiggy!!!     "+ "* " * 7)
-print("  " + "* " * 10 + "   HELLO BUDDY!!   " + "* " * 9) 
-print()
-print(" >> Choose your option :-")
-print()
-print(" 1 To Go inside Application ")
-print(" 2 To QUIT ")
-print()
-option=input(">> Enter your choice : ")
-print()
-if option == '1':
-    print(">> You are:-  \n\n 1.CUSTOMER \n 2.OWNER ")
-    print()
-    op = input(">> Enter your choice :")
-    print()
-    if op == '1':
+if choice == '1':
+    print(">> You are:-  \n\n 1.CUSTOMER \n 2.Restaurant OWNER \n")
+    choice = input(" Enter your option : \n")
+    if choice == '1':
             
-        print(" 1 to ORDER LOWEST PRICED FOOD AND TO ORDER SINGLE ITEM \n 2 to  SELECT RESTURANT AND ORDER MULTIPLE ITEM ")
+        print(" 1 For single order with lowest price \n 2 to  Select through restaurants and order multiple items \n")
+        choice = input(">> Enter your Choice :")
         print()
-        op = input(">> Enter your Choice :")
-        print()
-        if op == '1':
-            sngl.single_order(res_A, res_B, res_C)
+        if choice == '1':
+            singl.single_order(restau_S, restau_K,restau_M)
             
-        elif op == '2':
-            mul.multiple_order(res_A, res_B, res_C)
+        elif choice == '2':
+            multple.multiple_order(restau_S, restau_K, restau_M)
                     
-    elif op == '2':
+    elif choice == '2':
         while True:
-            print("Enter the owner pin")
-            pin = input()
-            if pin == 'xyz':
-                upd.add_item(res_A, res_B, res_C)
+            print("Enter the your password")
+            password = input()
+            if password == 'owner':
+                updation.add_item(restau_S, restau_K, restau_M)
             else:
-                print("invalid owner pin")
+                print("Invalid password")
             break
 
         
 else :
-    print("*" * 15 +"   You choose to quit :) have a nice day come back soon :D   " + "*" * 15 )
-    quit()
-                                                                            
+    print("~" * 5 +"   Goodbye :\ Enjoy your day     " + "~" * 5 ,"\n")

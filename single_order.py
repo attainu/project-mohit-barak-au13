@@ -6,79 +6,72 @@ from Payment import *
 
 class Single_Order_Selection(Sukhdev_dhaba, Koyal, Mannat_Haveli):
     
-    def single_order(self,res_A,res_B,res_C):
+    def single_order(self,restau_S,restau_K,restau_M):
         self.order_list = {}
 
-        for key in res_A.menu_T:
-            print(key,':',res_A.menu_T[key])
+        for key in restau_S.menu_sukhdev:
+            print(key,':',restau_S.menu_sukhdev[key])
 
-        for key in res_B.menu_S:
-            print(key,':',res_B.menu_S[key])
+        for key in restau_K.menu_koyal:
+            print(key,':',restau_K.menu_koyal[key])
 
-        for key in res_C.menu_D:
-            print(key,':',res_C.menu_D[key])
+        for key in restau_M.menu_mannat:
+            print(key,':',restau_M.menu_mannat[key])
 
        
         self.item_name = input(">> Enter the item name you wish to order: ")
         print()
         
-        if self.item_name in res_A.menu_T:
-            self.price_A = res_A.menu_T[self.item_name]
+        if self.item_name in restau_S.menu_sukhdev:
+            self.price_sukhdev = restau_S.menu_sukhdev[self.item_name]
         
             
             
         else:
-            self.price_A = '9999'
+            self.price_sukhdev = '9999'
         
 
-        if self.item_name in res_B.menu_S:
-            self.price_B = res_B.menu_S[self.item_name]
+        if self.item_name in restau_K.menu_koyal:
+            self.price_koyal = restau_K.menu_koyal[self.item_name]
     
             
         else:
-            self.price_B = '9999'
+            self.price_koyal = '9999'
 
 
-        if self.item_name in res_C.menu_D:
-            self.price_C = res_C.menu_D[self.item_name]
+        if self.item_name in restau_M.menu_mannat:
+            self.price_mannat = restau_M.menu_mannat[self.item_name]
             
             
         else:
-            self.price_C = '9999'
+            self.price_mannat = '9999'
     
     
 
 
-        self.min_price = min(self.price_A,self.price_B,self.price_C)
+        self.min_price = min(self.price_sukhdev,self.price_koyal,self.price_mannat)
         
         time.sleep(1)
         #here we checking that item input is in the given restaurant or not and second we check that if item is present then we check the price of that item is equal to min price or not
-        if self.item_name in res_A.menu_T and self.min_price in res_A.menu_T[self.item_name]:
-            print(self.item_name,"in Sukhdev Dhabha are quoted  lowest price that is Rs",self.min_price)
+        if self.item_name in restau_S.menu_sukhdev and self.min_price in restau_S.menu_sukhdev[self.item_name]:
+            print(self.item_name,"in Sukhdev Dhabha lowest price of this is Rs: ",self.min_price)
             print()
             self.order_list[self.item_name]=self.min_price
             
             Payment.order_payment(self.order_list)
 
-        if self.item_name in res_B.menu_S and self.min_price in res_B.menu_S[self.item_name]:
-            print(self.item_name," in Koyal are quoted  lowest price that is Rs",self.min_price)
+        if self.item_name in restau_K.menu_koyal and self.min_price in restau_K.menu_koyal[self.item_name]:
+            print(self.item_name," in Koyal lowest price of this is Rs: ",self.min_price)
             print()
             self.order_list[self.item_name]=self.min_price
             
             Payment.order_payment(self.order_list)
 
-        if self.item_name in res_C.menu_D and self.min_price in res_C.menu_D[self.item_name]:
-            print(self.item_name,"in Mannat Haveli are quoted  lowest price that is Rs",self.min_price)
+        if self.item_name in restau_M.menu_mannat and self.min_price in restau_M.menu_mannat[self.item_name]:
+            print(self.item_name,"in Mannat Haveli lowest price for this is Rs: ",self.min_price)
             print()
             self.order_list[self.item_name]=self.min_price
         
             Payment.order_payment(self.order_list)
             
         
-            
-
-
-
-        
-
-            
