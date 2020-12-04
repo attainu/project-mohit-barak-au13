@@ -1,32 +1,28 @@
-# Food Delivery System Project Report
+# Food Delivery System Project Report "Swiggy"
 
 Food Delivery System is a python program which offer the food at your doorstep.
 
-## About Project
+ About Swiggy App
 
 • This program is made for restaurant owner and for customer, where owner can add or remove food items in its restaurant.
 
 • And the customer access this program to order the food item he/she wish.
 
-• In this program, we provide a choice to select restaurant, which will describe below in :
-```
-How Program works
-```
-• Online or Cash On Delivery and card payment are the choice for payment we provide to the customer.
- 
+
+## Module Used 
+
+• time.sleep() in python 
 
 
 ## Prerequisite
-• VS code with bash shell
 
 • python enable in VS code
 
 
 
+## How The Program Works
 
-## How The Program Works 
-
-• Now, we learn how this program will run, we provide the testcase for how many times you want to access the program. 
+• Here, we give choice to enter the app for food ordering or quit.
 
 • Here, we give the choice as you are a restaurant owner or a customer.
 
